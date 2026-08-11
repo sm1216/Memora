@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<!-- Use this file as CODE_SIGN_ENTITLEMENTS when on a paid Apple Developer team -->
+	<key>com.apple.developer.nfc.readersession.formats</key>
+	<array>
+		<string>NDEF</string>
+		<string>TAG</string>
+	</array>
+</dict>
+</plist>

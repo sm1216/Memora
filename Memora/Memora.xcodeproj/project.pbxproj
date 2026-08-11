@@ -1,0 +1,244 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1; classes = {}; objectVersion = 56;
+	objects = {
+		DF993C4CD829427B901B8A5D /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B991D3DCAAC49A5B954AEC6 /* Config.swift */; };
+		246A0DB70E2146C1A641FBEE /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F0A284721AB466998B09DEC /* MainTabView.swift */; };
+		CA2E53631C9D45FE827E5C03 /* MemoraApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1173727B4B9B4D17A9CFF076 /* MemoraApp.swift */; };
+		7D6E2E64B5AC4F3CA59AF08E /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A32C6114EBA466186EB1E87 /* Models.swift */; };
+		D9F3723DAFE7408A82BD1675 /* AppSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4BDB3B27AE484B930C1BDC /* AppSettings.swift */; };
+		979D24983BE54FE386396670 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65E07CD9AACD4BA191C6EB1F /* AuthService.swift */; };
+		EB66452E028047F9A6ED40E7 /* MemoryStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC8EC00DB2CE439D9617B452 /* MemoryStore.swift */; };
+		D1D67B18BAAF4ED78BADD068 /* NFCService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F369E5D9C95A404FBC3A94BA /* NFCService.swift */; };
+		7DE1C0A46F7045F99F57790F /* PhotoMetadataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 912C9FA623FA477F8F5B615F /* PhotoMetadataService.swift */; };
+		488B297D03F240338FD33C06 /* SupabaseClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 152EC43AF97B4CA09966F428 /* SupabaseClient.swift */; };
+		AA11EB04A026485BB895E806 /* AppTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2E0A6903606434AAC2E7048 /* AppTheme.swift */; };
+		36138F011CD24FA6842B61A7 /* AuthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C6E21224F904FADBDFA6319 /* AuthView.swift */; };
+		35EDF5E02E3D403C8E041974 /* GlobeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FB8B4286F384B189CEB8690 /* GlobeView.swift */; };
+		8521438968574EA4835C8DC6 /* MapboxMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC73A5156EF4A749304140D /* MapboxMapView.swift */; };
+		C112E24C94084DF48B951B62 /* PolaroidCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EAAA1CD444843BB8EFBEFFB /* PolaroidCard.swift */; };
+		B96C21C56E544C419979C7C4 /* CreateMemoryFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E940749B06452989AB41AD /* CreateMemoryFlow.swift */; };
+		877E81AEFAD54526BAA2A051 /* HomeGlobeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DEC727EDE0E42E48E64B118 /* HomeGlobeView.swift */; };
+		617D8CC1051B4BB78E613262 /* EditMemoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 015DDF753DFD4A9C8E0BF957 /* EditMemoryView.swift */; };
+		D4A94D788CD74A6EB866F2CD /* MemoriesBoardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09A4EAC1687C488DAD895BCC /* MemoriesBoardView.swift */; };
+		CE1FE316095E4F96A8D27DA0 /* MemoryDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA6DE709E525445E933AA537 /* MemoryDetailView.swift */; };
+		95B3BC8457524833AE3F1C01 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95EAF17FCFBD40789D669A2D /* ProfileView.swift */; };
+		B16E10B166A045F7BB4B39F5 /* ScanView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7BAD883C68C42F7B95F1B69 /* ScanView.swift */; };
+		D20F184E1AC64F83802C12F8 /* WriteNFCView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1499F92E37C54AFA8DB1EF3E /* WriteNFCView.swift */; };
+		685B916741DB4C278DD30FDA /* TagsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4387D82A462C446DB644804F /* TagsView.swift */; };
+		2DD8EA8510874433BF55B016 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC17C8E12A3140B1A1C512E2 /* Assets.xcassets */; };
+		7B991D3DCAAC49A5B954AEC6 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+		7F0A284721AB466998B09DEC /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
+		1173727B4B9B4D17A9CFF076 /* MemoraApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoraApp.swift; sourceTree = "<group>"; };
+		7A32C6114EBA466186EB1E87 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
+		FA4BDB3B27AE484B930C1BDC /* AppSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSettings.swift; sourceTree = "<group>"; };
+		65E07CD9AACD4BA191C6EB1F /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
+		FC8EC00DB2CE439D9617B452 /* MemoryStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryStore.swift; sourceTree = "<group>"; };
+		F369E5D9C95A404FBC3A94BA /* NFCService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NFCService.swift; sourceTree = "<group>"; };
+		912C9FA623FA477F8F5B615F /* PhotoMetadataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoMetadataService.swift; sourceTree = "<group>"; };
+		152EC43AF97B4CA09966F428 /* SupabaseClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupabaseClient.swift; sourceTree = "<group>"; };
+		E2E0A6903606434AAC2E7048 /* AppTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTheme.swift; sourceTree = "<group>"; };
+		4C6E21224F904FADBDFA6319 /* AuthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthView.swift; sourceTree = "<group>"; };
+		4FB8B4286F384B189CEB8690 /* GlobeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobeView.swift; sourceTree = "<group>"; };
+		AAC73A5156EF4A749304140D /* MapboxMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapboxMapView.swift; sourceTree = "<group>"; };
+		8EAAA1CD444843BB8EFBEFFB /* PolaroidCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PolaroidCard.swift; sourceTree = "<group>"; };
+		04E940749B06452989AB41AD /* CreateMemoryFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateMemoryFlow.swift; sourceTree = "<group>"; };
+		0DEC727EDE0E42E48E64B118 /* HomeGlobeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeGlobeView.swift; sourceTree = "<group>"; };
+		015DDF753DFD4A9C8E0BF957 /* EditMemoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditMemoryView.swift; sourceTree = "<group>"; };
+		09A4EAC1687C488DAD895BCC /* MemoriesBoardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoriesBoardView.swift; sourceTree = "<group>"; };
+		CA6DE709E525445E933AA537 /* MemoryDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryDetailView.swift; sourceTree = "<group>"; };
+		95EAF17FCFBD40789D669A2D /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		B7BAD883C68C42F7B95F1B69 /* ScanView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanView.swift; sourceTree = "<group>"; };
+		1499F92E37C54AFA8DB1EF3E /* WriteNFCView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteNFCView.swift; sourceTree = "<group>"; };
+		4387D82A462C446DB644804F /* TagsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagsView.swift; sourceTree = "<group>"; };
+		AC17C8E12A3140B1A1C512E2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		ED979DBFCA3C44708294F8CB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0912F756189F445680BA1C05 /* Memora.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Memora.entitlements; sourceTree = "<group>"; };
+		911516D15C73477DA19CD7B8 /* Memora.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Memora.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		84A2043900BE4A32A6F1C45C /* Frameworks */ = { isa = PBXFrameworksBuildPhase; buildActionMask = 2147483647; files = ( ); runOnlyForDeploymentPostprocessing = 0; };
+		ED3745C7886E4DD9BD535D91 = { isa = PBXGroup; children = ( A8C175CC1F654A6FA5E9F5A8 /* Memora */, 9A711630C46E4D3CBADE161B /* Products */, ); sourceTree = "<group>"; };
+		9A711630C46E4D3CBADE161B /* Products */ = { isa = PBXGroup; children = ( 911516D15C73477DA19CD7B8 /* Memora.app */, ); name = Products; sourceTree = "<group>"; };
+		A8C175CC1F654A6FA5E9F5A8 /* Memora */ = {
+			isa = PBXGroup;
+			children = (
+				E9442875960D421095CA2C3F /* App */,
+				0B8B687088A840C9B2B7A60D /* Models */,
+				2DA9C7F08D5049DCA24166EB /* Resources */,
+				BA02151395D44407908CF944 /* Services */,
+				40B4360A17784100911B4C18 /* Theme */,
+				E62019D520D648409ADCA1C8 /* Views */,
+			);
+			path = Memora;
+			sourceTree = "<group>";
+		};
+		E9442875960D421095CA2C3F /* App */ = {
+			isa = PBXGroup;
+			children = (
+				7B991D3DCAAC49A5B954AEC6 /* Config.swift */,
+				7F0A284721AB466998B09DEC /* MainTabView.swift */,
+				1173727B4B9B4D17A9CFF076 /* MemoraApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		0B8B687088A840C9B2B7A60D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				7A32C6114EBA466186EB1E87 /* Models.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		2DA9C7F08D5049DCA24166EB /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				AC17C8E12A3140B1A1C512E2 /* Assets.xcassets */,
+				ED979DBFCA3C44708294F8CB /* Info.plist */,
+				0912F756189F445680BA1C05 /* Memora.entitlements */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		BA02151395D44407908CF944 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				FA4BDB3B27AE484B930C1BDC /* AppSettings.swift */,
+				65E07CD9AACD4BA191C6EB1F /* AuthService.swift */,
+				FC8EC00DB2CE439D9617B452 /* MemoryStore.swift */,
+				F369E5D9C95A404FBC3A94BA /* NFCService.swift */,
+				912C9FA623FA477F8F5B615F /* PhotoMetadataService.swift */,
+				152EC43AF97B4CA09966F428 /* SupabaseClient.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		40B4360A17784100911B4C18 /* Theme */ = {
+			isa = PBXGroup;
+			children = (
+				E2E0A6903606434AAC2E7048 /* AppTheme.swift */,
+			);
+			path = Theme;
+			sourceTree = "<group>";
+		};
+		E62019D520D648409ADCA1C8 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				CCD35FC71513485C9E23E9B5 /* Auth */,
+				CC3364C5BDDE45F78EF20A34 /* Components */,
+				26777ACA32B94D9AB5CE270E /* Create */,
+				8E305EC8BA6246C0831B7FDD /* Home */,
+				A4269AD615C944B9BC24CFD6 /* Memories */,
+				D1483BF342134F229045C7A6 /* Profile */,
+				568C2C6DCCAA4C9A8E67E351 /* Scan */,
+				77FCC735F1424DCFA2950B26 /* Tags */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		CCD35FC71513485C9E23E9B5 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				4C6E21224F904FADBDFA6319 /* AuthView.swift */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		CC3364C5BDDE45F78EF20A34 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				4FB8B4286F384B189CEB8690 /* GlobeView.swift */,
+				AAC73A5156EF4A749304140D /* MapboxMapView.swift */,
+				8EAAA1CD444843BB8EFBEFFB /* PolaroidCard.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		26777ACA32B94D9AB5CE270E /* Create */ = {
+			isa = PBXGroup;
+			children = (
+				04E940749B06452989AB41AD /* CreateMemoryFlow.swift */,
+			);
+			path = Create;
+			sourceTree = "<group>";
+		};
+		8E305EC8BA6246C0831B7FDD /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				0DEC727EDE0E42E48E64B118 /* HomeGlobeView.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		A4269AD615C944B9BC24CFD6 /* Memories */ = {
+			isa = PBXGroup;
+			children = (
+				015DDF753DFD4A9C8E0BF957 /* EditMemoryView.swift */,
+				09A4EAC1687C488DAD895BCC /* MemoriesBoardView.swift */,
+				CA6DE709E525445E933AA537 /* MemoryDetailView.swift */,
+			);
+			path = Memories;
+			sourceTree = "<group>";
+		};
+		D1483BF342134F229045C7A6 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				95EAF17FCFBD40789D669A2D /* ProfileView.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		568C2C6DCCAA4C9A8E67E351 /* Scan */ = {
+			isa = PBXGroup;
+			children = (
+				B7BAD883C68C42F7B95F1B69 /* ScanView.swift */,
+				1499F92E37C54AFA8DB1EF3E /* WriteNFCView.swift */,
+			);
+			path = Scan;
+			sourceTree = "<group>";
+		};
+		77FCC735F1424DCFA2950B26 /* Tags */ = {
+			isa = PBXGroup;
+			children = (
+				4387D82A462C446DB644804F /* TagsView.swift */,
+			);
+			path = Tags;
+			sourceTree = "<group>";
+		};
+		EBDB424D244446E29D87F89B /* Memora */ = { isa = PBXNativeTarget; buildConfigurationList = BF208B4D67E9406D87FDEED7; buildPhases = ( C399CCBC11E9411B8F9BE611 /* Sources */, 84A2043900BE4A32A6F1C45C /* Frameworks */, 34B28F921A0D471C82FB810E /* Resources */, ); buildRules = ( ); dependencies = ( ); name = Memora; productName = Memora; productReference = 911516D15C73477DA19CD7B8 /* Memora.app */; productType = "com.apple.product-type.application"; };
+		504D6B0F3FB84B69AA449C57 /* Project object */ = { isa = PBXProject; attributes = { BuildIndependentTargetsInParallel = 1; LastSwiftUpdateCheck = 1600; LastUpgradeCheck = 1600; TargetAttributes = { EBDB424D244446E29D87F89B = { CreatedOnToolsVersion = 16.0; }; }; }; buildConfigurationList = D0346E633F2A418E844604E4; compatibilityVersion = "Xcode 14.0"; developmentRegion = en; hasScannedForEncodings = 0; knownRegions = ( en, Base, ); mainGroup = ED3745C7886E4DD9BD535D91; productRefGroup = 9A711630C46E4D3CBADE161B /* Products */; projectDirPath = ""; projectRoot = ""; targets = ( EBDB424D244446E29D87F89B /* Memora */, ); };
+		34B28F921A0D471C82FB810E /* Resources */ = { isa = PBXResourcesBuildPhase; buildActionMask = 2147483647; files = ( 2DD8EA8510874433BF55B016 /* Assets.xcassets in Resources */, ); runOnlyForDeploymentPostprocessing = 0; };
+		C399CCBC11E9411B8F9BE611 /* Sources */ = { isa = PBXSourcesBuildPhase; buildActionMask = 2147483647; files = (
+				DF993C4CD829427B901B8A5D /* Config.swift in Sources */,
+				246A0DB70E2146C1A641FBEE /* MainTabView.swift in Sources */,
+				CA2E53631C9D45FE827E5C03 /* MemoraApp.swift in Sources */,
+				7D6E2E64B5AC4F3CA59AF08E /* Models.swift in Sources */,
+				D9F3723DAFE7408A82BD1675 /* AppSettings.swift in Sources */,
+				979D24983BE54FE386396670 /* AuthService.swift in Sources */,
+				EB66452E028047F9A6ED40E7 /* MemoryStore.swift in Sources */,
+				D1D67B18BAAF4ED78BADD068 /* NFCService.swift in Sources */,
+				7DE1C0A46F7045F99F57790F /* PhotoMetadataService.swift in Sources */,
+				488B297D03F240338FD33C06 /* SupabaseClient.swift in Sources */,
+				AA11EB04A026485BB895E806 /* AppTheme.swift in Sources */,
+				36138F011CD24FA6842B61A7 /* AuthView.swift in Sources */,
+				35EDF5E02E3D403C8E041974 /* GlobeView.swift in Sources */,
+				8521438968574EA4835C8DC6 /* MapboxMapView.swift in Sources */,
+				C112E24C94084DF48B951B62 /* PolaroidCard.swift in Sources */,
+				B96C21C56E544C419979C7C4 /* CreateMemoryFlow.swift in Sources */,
+				877E81AEFAD54526BAA2A051 /* HomeGlobeView.swift in Sources */,
+				617D8CC1051B4BB78E613262 /* EditMemoryView.swift in Sources */,
+				D4A94D788CD74A6EB866F2CD /* MemoriesBoardView.swift in Sources */,
+				CE1FE316095E4F96A8D27DA0 /* MemoryDetailView.swift in Sources */,
+				95B3BC8457524833AE3F1C01 /* ProfileView.swift in Sources */,
+				B16E10B166A045F7BB4B39F5 /* ScanView.swift in Sources */,
+				D20F184E1AC64F83802C12F8 /* WriteNFCView.swift in Sources */,
+				685B916741DB4C278DD30FDA /* TagsView.swift in Sources */,
+			); runOnlyForDeploymentPostprocessing = 0; };
+		E8B98EA769134866998C1BFA /* Debug */ = { isa = XCBuildConfiguration; buildSettings = { ALWAYS_SEARCH_USER_PATHS = NO; CLANG_ENABLE_MODULES = YES; DEBUG_INFORMATION_FORMAT = dwarf; ENABLE_TESTABILITY = YES; GCC_OPTIMIZATION_LEVEL = 0; IPHONEOS_DEPLOYMENT_TARGET = 17.0; ONLY_ACTIVE_ARCH = YES; SDKROOT = iphoneos; SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)"; SWIFT_OPTIMIZATION_LEVEL = "-Onone"; }; name = Debug; };
+		B4121CDB8DDF431AA09C49E7 /* Release */ = { isa = XCBuildConfiguration; buildSettings = { ALWAYS_SEARCH_USER_PATHS = NO; CLANG_ENABLE_MODULES = YES; DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym"; IPHONEOS_DEPLOYMENT_TARGET = 17.0; SDKROOT = iphoneos; SWIFT_COMPILATION_MODE = wholemodule; VALIDATE_PRODUCT = YES; }; name = Release; };
+		E56956B69CC746C7B83E4F07 /* Debug */ = { isa = XCBuildConfiguration; buildSettings = { ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon; CODE_SIGN_ENTITLEMENTS = Memora/Resources/Memora.entitlements; CODE_SIGN_STYLE = Automatic; CURRENT_PROJECT_VERSION = 1; DEVELOPMENT_TEAM = DCT7JZV5GM; GENERATE_INFOPLIST_FILE = NO; INFOPLIST_FILE = Memora/Resources/Info.plist; LD_RUNPATH_SEARCH_PATHS = ( "$(inherited)", "@executable_path/Frameworks", ); MARKETING_VERSION = 1.0; PRODUCT_BUNDLE_IDENTIFIER = com.smohanty.memora; PRODUCT_NAME = "$(TARGET_NAME)"; SUPPORTED_PLATFORMS = "iphoneos iphonesimulator"; SWIFT_VERSION = 5.0; TARGETED_DEVICE_FAMILY = 1; }; name = Debug; };
+		F4C0F0966D0C4812924E0C7A /* Release */ = { isa = XCBuildConfiguration; buildSettings = { ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon; CODE_SIGN_ENTITLEMENTS = Memora/Resources/Memora.entitlements; CODE_SIGN_STYLE = Automatic; CURRENT_PROJECT_VERSION = 1; DEVELOPMENT_TEAM = DCT7JZV5GM; GENERATE_INFOPLIST_FILE = NO; INFOPLIST_FILE = Memora/Resources/Info.plist; LD_RUNPATH_SEARCH_PATHS = ( "$(inherited)", "@executable_path/Frameworks", ); MARKETING_VERSION = 1.0; PRODUCT_BUNDLE_IDENTIFIER = com.smohanty.memora; PRODUCT_NAME = "$(TARGET_NAME)"; SUPPORTED_PLATFORMS = "iphoneos iphonesimulator"; SWIFT_VERSION = 5.0; TARGETED_DEVICE_FAMILY = 1; }; name = Release; };
+		D0346E633F2A418E844604E4 = { isa = XCConfigurationList; buildConfigurations = ( E8B98EA769134866998C1BFA /* Debug */, B4121CDB8DDF431AA09C49E7 /* Release */, ); defaultConfigurationIsVisible = 0; defaultConfigurationName = Release; };
+		BF208B4D67E9406D87FDEED7 = { isa = XCConfigurationList; buildConfigurations = ( E56956B69CC746C7B83E4F07 /* Debug */, F4C0F0966D0C4812924E0C7A /* Release */, ); defaultConfigurationIsVisible = 0; defaultConfigurationName = Release; };
+	};
+	rootObject = 504D6B0F3FB84B69AA449C57 /* Project object */;
+}

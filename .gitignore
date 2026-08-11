@@ -1,0 +1,36 @@
+# Secrets / env
+Secrets.local
+**/.env
+**/.env.*
+!.env.example
+!**/Secrets.local.example
+
+# Supabase CLI local state (project refs, pooler URLs, certs)
+**/.temp/
+supabase/.temp/
+**/supabase/.temp/
+
+# Xcode / macOS
+.DS_Store
+DerivedData/
+*.xcuserstate
+*.xcuserdata/
+**/xcuserdata/
+*.xccheckout
+*.moved-aside
+*.hmap
+*.ipa
+*.dSYM.zip
+*.dSYM
+
+# SwiftPM
+.build/
+.swiftpm/
+Packages/
+Package.resolved
+
+# IDEs
+.idea/
+.vscode/
+*.swp
+*~

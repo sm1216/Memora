@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>$(DEVELOPMENT_LANGUAGE)</string>
+	<key>CFBundleDisplayName</key>
+	<string>Memories</string>
+	<key>CFBundleExecutable</key>
+	<string>$(EXECUTABLE_NAME)</string>
+	<key>CFBundleIdentifier</key>
+	<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string>$(PRODUCT_NAME)</string>
+	<key>CFBundlePackageType</key>
+	<string>APPL</string>
+	<key>CFBundleShortVersionString</key>
+	<string>1.0</string>
+	<key>CFBundleVersion</key>
+	<string>1</string>
+	<key>LSRequiresIPhoneOS</key>
+	<true/>
+	<key>NFCReaderUsageDescription</key>
+	<string>Memora reads and writes NFC stickers so guests can open your memory albums with one tap.</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>Select photos to build memory albums. We read date, time, and location from photo metadata when available.</string>
+	<key>NSPhotoLibraryAddUsageDescription</key>
+	<string>Optionally save processed photos back to your library.</string>
+	<key>NSCameraUsageDescription</key>
+	<string>Capture new moments for your memory albums.</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>Tag memory locations on the map and globe.</string>
+	<key>UIApplicationSceneManifest</key>
+	<dict>
+		<key>UIApplicationSupportsMultipleScenes</key>
+		<false/>
+	</dict>
+	<key>UILaunchScreen</key>
+	<dict>
+		<key>UIColorName</key>
+		<string>LaunchBackground</string>
+	</dict>
+	<key>UISupportedInterfaceOrientations</key>
+	<array>
+		<string>UIInterfaceOrientationPortrait</string>
+	</array>
+	<key>UIBackgroundModes</key>
+	<array/>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleURLName</key>
+			<string>com.smohanty.memora</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>memora</string>
+			</array>
+		</dict>
+	</array>
+	<!-- Allow querying free NFC writer apps -->
+	<key>LSApplicationQueriesSchemes</key>
+	<array>
+		<string>nfctools</string>
+		<string>nfc-tools</string>
+		<string>shortcuts</string>
+	</array>
+</dict>
+</plist>
+
+
