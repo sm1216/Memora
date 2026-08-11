@@ -94,52 +94,207 @@ Warm clay journal aesthetic — paper, terracotta, soft type. Not neon. Not SaaS
 
 ---
 
-## Quick start
+## Make it run (setup checklist)
 
-### Requirements
-- **Xcode 15+** (full Xcode from the Mac App Store)
-- **iPhone 7+** for real NFC (Simulator has a mock scan path)
-- Apple ID for signing (Personal Team is fine for device install)
+Follow these steps on a **Mac**. The app is native SwiftUI — no CocoaPods / SPM install step for the default build.
 
-### Open the project
+### 1. Requirements
+
+| Need | Notes |
+|------|--------|
+| **macOS** | Recent enough for Xcode 15+ |
+| **Xcode 15+** | Full Xcode from the Mac App Store (not just Command Line Tools) |
+| **Apple ID** | Free Personal Team is enough for Simulator + basic device install |
+| **iPhone 7+** | Only required for **real** NFC; Simulator has a mock scan/write path |
+| **Mapbox account** | Free tier is fine — needed for trip maps (see step 3) |
+
+Optional later:
+
+- **Paid Apple Developer Program ($99/yr)** — real NFC Tag Reading entitlement  
+- **Supabase project** — cloud sync / email auth (local guest mode works without this)  
+- **Google Cloud OAuth client** — Google sign-in  
+
+### 2. Get the code
 
 ```bash
+git clone https://github.com/sm1216/Memora.git
+cd Memora
 open Memora/Memora.xcodeproj
 ```
 
-1. Select the **Memora** target → **Signing & Capabilities**  
-2. Choose your **Team**  
-3. Plug in your iPhone → Run ▶  
+### 3. Set your Mapbox public token (required for maps)
 
-First launch: **Continue as Guest** is the fastest path. Demo memories load automatically so you can feel the product immediately.
+GitHub push protection blocks committed Mapbox tokens, so the repo ships with an **empty** token.
+
+1. Create a free account at [Mapbox](https://account.mapbox.com/)  
+2. Create an access token with the default **public** scopes (`pk.*`)  
+3. Open `Memora/Memora/App/Config.swift` and set:
+
+```swift
+static let mapboxAccessToken = "pk.YOUR_PUBLIC_TOKEN_HERE"
+```
+
+4. **Do not commit** this file with a real token. Keep secrets local.
+
+Also (optional, for CLI / server tools only):
+
+```bash
+cp Memora/Secrets.local.example Memora/Secrets.local
+# edit Memora/Secrets.local — MAPBOX_PUBLIC_TOKEN / MAPBOX_SECRET_TOKEN
+# Secrets.local is gitignored. Never put sk.* into Swift that ships on the phone.
+```
+
+| Token | Where | Commit? |
+|-------|--------|---------|
+| Mapbox **public** `pk.*` | `Config.swift` (local only) | No |
+| Mapbox **secret** `sk.*` | `Secrets.local` only | Never |
+| Supabase **anon** key | Already in `Config.swift` (public client key) | OK for client apps |
+| Supabase **service_role** | Never in the iOS app | Never |
+
+Without a Mapbox `pk.*` token, the **home globe still works** (SceneKit). In-app **Mapbox trip maps** will not load tiles until you set the token.
+
+### 4. Signing in Xcode
+
+1. Select the **Memora** target  
+2. **Signing & Capabilities**  
+3. Check **Automatically manage signing**  
+4. Choose your **Team** (Personal Team is fine)  
+5. If the bundle ID `com.smohanty.memora` is taken on your team, change **Bundle Identifier** to something unique (e.g. `com.yourname.memora`)
+
+### 5. Run
+
+**Simulator (fastest)**
+
+1. Pick any recent iPhone simulator  
+2. Press **Run ▶**  
+3. First launch → **Continue as Guest**  
+4. Demo memories load so you can explore without backend setup  
+
+**Physical iPhone**
+
+1. Plug in the phone, trust the computer  
+2. Select your device as the run destination  
+3. Run ▶  
+4. On the phone: **Settings → General → VPN & Device Management** → trust your developer certificate if prompted  
+5. Allow photo / camera / location prompts when you use those features  
+
+### 6. What works out of the box vs what needs setup
+
+| Feature | Guest + empty Mapbox | After Mapbox token | After paid Apple Dev + NFC entitlement | After your own Supabase |
+|---------|----------------------|--------------------|----------------------------------------|-------------------------|
+| Browse demo albums | ✅ | ✅ | ✅ | ✅ |
+| Create local memories | ✅ | ✅ | ✅ | ✅ |
+| Home 3D globe | ✅ | ✅ | ✅ | ✅ |
+| Trip Mapbox maps | ❌ blank / no tiles | ✅ | ✅ | ✅ |
+| NFC mock (Simulator) | ✅ | ✅ | ✅ | ✅ |
+| Real NFC scan/write | ❌ | ❌ | ✅ | ✅ |
+| Email / cloud sync | uses bundled Supabase project if reachable | same | same | ✅ your project |
 
 ---
 
-## NFC flow (in practice)
+## NFC — make real stickers work
+
+### Simulator
+
+- **Scan** injects demo code `ROME26`  
+- **Write** succeeds in mock mode (no hardware)
+
+### Free Apple ID (Personal Team)
+
+Real **NFC Tag Reading** entitlement is **not** available on free teams.  
+`Memora/Memora/Resources/Memora.entitlements` keeps the NFC keys commented for that reason.
+
+You can still:
+
+1. Create a memory in the app and note its short id / deep link (`memora://m/{SHORTID}`)  
+2. Write that URL to a sticker with any free NDEF writer app  
+3. Tap the sticker → iOS opens Memora into that album when the app is installed  
+
+### Paid Apple Developer Program (real in-app NFC)
+
+1. Enroll at [developer.apple.com](https://developer.apple.com)  
+2. In Xcode → **Signing & Capabilities** → **+ Capability** → **Near Field Communication Tag Reading**  
+3. Uncomment the NFC keys in `Memora/Memora/Resources/Memora.entitlements` (or switch to `Memora.nfc.entitlements` if you use that file)  
+4. Rebuild on a physical iPhone 7+  
+
+### NFC flow (in practice)
 
 1. Create a memory (photos → details → save)  
 2. Open the memory → **Write to NFC sticker**  
-3. Hold the top of the iPhone to the sticker  
+3. Hold the **top** of the iPhone to the sticker  
 4. Sticker stores a short link: `memora://m/{SHORTID}`  
-5. Later: **Scan** (or just tap the sticker) → that album only  
+5. Later: **Scan** (or system tag read) → **that album only**
 
-On the **Simulator**, scan injects demo code `ROME26` and write succeeds in mock mode.
+---
 
-> Free Apple Developer accounts can still use the hybrid path: write URLs with free NFC tools if needed; the app opens albums via the deep link when iOS reads the tag.
+## Optional: Supabase (your own backend)
+
+The app is already pointed at a sample Supabase project in `Config.swift`. To use **your** project:
+
+1. Create a project at [supabase.com](https://supabase.com)  
+2. Run the migration SQL:
+
+```bash
+# From repo root, with Supabase CLI logged in and linked:
+cd Memora
+supabase db push
+# or paste Memora/supabase/migrations/20260809230000_memora_schema.sql
+# into the Supabase SQL editor
+```
+
+3. Create a **Storage** bucket named `memories` (public read if you want share links)  
+4. Auth → enable **Email** (and optionally Google / Apple)  
+5. For local/dev, turn **off** “Confirm email” if you want instant sign-in  
+6. Update in `Memora/Memora/App/Config.swift`:
+
+```swift
+static let supabaseURL = URL(string: "https://YOUR_PROJECT_REF.supabase.co")!
+static let supabaseAnonKey = "YOUR_ANON_PUBLIC_KEY"
+```
+
+Use the **anon / public** key only. Never put `service_role` in the iOS app.
+
+---
+
+## Optional: Google Sign-In
+
+1. [Google Cloud Console](https://console.cloud.google.com/) → create an **iOS** OAuth client ID  
+2. Bundle ID must match Xcode (default: `com.smohanty.memora`)  
+3. In `Config.swift`:
+
+```swift
+static let googleClientID = "YOUR_ID.apps.googleusercontent.com"
+```
+
+4. Xcode → Target → **Info** → **URL Types** → add the **reversed** client ID scheme (`com.googleusercontent.apps.…`)  
+5. Enable Google provider in your Supabase Auth settings with the same client  
+
+---
+
+## Permissions the app will ask for
+
+iOS will prompt when features are used (strings live in `Info.plist`):
+
+- **NFC** — read/write stickers  
+- **Photo library** — pick album photos (+ optional metadata for date/place)  
+- **Camera** — capture new moments  
+- **Location (when in use)** — tag memories on map/globe  
 
 ---
 
 ## Project layout
 
 ```
-nfc_album/
+Memora/                       ← repo root
 ├── README.md                 ← you are here
+├── .gitignore
 └── Memora/
     ├── Memora.xcodeproj
     ├── DESIGN.md             # clay journal design system
+    ├── Secrets.local.example # copy → Secrets.local (gitignored)
     ├── supabase/             # schema / migrations
     └── Memora/
-        ├── App/              # entry, tabs, config
+        ├── App/              # entry, tabs, Config.swift
         ├── Theme/            # terracotta · cream tokens
         ├── Models/           # Memory, tags, sample data
         ├── Services/         # Auth, store, Core NFC
@@ -157,36 +312,22 @@ nfc_album/
 | Maps / trips | Mapbox (in-app) + SceneKit globe |
 | NFC | Core NFC + system NDEF URL deep links |
 | Backend (optional) | Supabase for cloud memories |
-| Auth | Sign in with Apple · Google · Guest |
+| Auth | Email · Google (optional) · Guest |
 
-Local-first works out of the box — no account required to start.
+**Local-first works out of the box** — Guest mode + demo data, no account required to start.
 
 ---
 
-## Optional setup
+## Troubleshooting
 
-<details>
-<summary><strong>Google Sign-In</strong></summary>
-
-1. [Google Cloud Console](https://console.cloud.google.com/) → OAuth client ID → **iOS**  
-2. Bundle ID: `com.smohanty.memora`  
-3. Paste into `Memora/Memora/App/Config.swift`:
-
-```swift
-static let googleClientID = "YOUR_ID.apps.googleusercontent.com"
-```
-
-4. Add the reversed client ID as a URL scheme in Xcode → Target → Info → URL Types  
-
-</details>
-
-<details>
-<summary><strong>Mapbox</strong></summary>
-
-Public token lives in `Config.swift`. Trip maps use Mapbox GL in a `WKWebView`.  
-The home globe is native SceneKit and works offline.
-
-</details>
+| Problem | Fix |
+|---------|-----|
+| Maps blank / gray | Set `mapboxAccessToken` in `Config.swift` to a valid `pk.*` token |
+| Signing errors | Pick a Team; change bundle ID if it’s already used |
+| App won’t open on device | Trust the developer cert under **VPN & Device Management** |
+| NFC capability missing | Free Personal Team cannot use NFC Tag Reading — use paid program or external NDEF writer |
+| Auth / cloud fails | Check Supabase URL + anon key; confirm email setting; RLS policies from migration applied |
+| Push rejected for secrets | Never commit `pk.*` / `sk.*` / `Secrets.local` — keep tokens local only |
 
 ---
 

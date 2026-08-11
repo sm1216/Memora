@@ -14,4 +14,16 @@
 open Memora.xcodeproj
 ```
 
-See the root README for the full story, NFC flow, and setup.
+### Make it run (summary)
+
+1. Open the project in **Xcode 15+**  
+2. Set your Mapbox **public** token in `Memora/App/Config.swift` (`mapboxAccessToken = "pk.…"`) — do not commit real tokens  
+3. **Signing & Capabilities** → choose your Team  
+4. Run on Simulator or a physical iPhone  
+5. First launch → **Continue as Guest** (demo memories load automatically)
+
+**Real NFC** needs a paid Apple Developer account + NFC Tag Reading entitlement.  
+**Your own backend** → apply `supabase/migrations/…` and update Supabase URL/anon key in `Config.swift`.
+
+Full checklist (Mapbox, NFC free vs paid, Supabase, Google Sign-In, troubleshooting):  
+**[../README.md](../README.md)#make-it-run-setup-checklist**
